@@ -1,0 +1,18 @@
+.card{
+    border-radius: 10px;
+    background-color: rgb(54, 101, 70);
+    box-shadow: 3px 3px 3px rgba(54, 101, 70, 0.445);
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.card_title{
+    margin-bottom: 20px;
+}
+.card_text{
+    margin:0;
+}
+.card_body{
+    background-color: rgb(54,101,70);
+    color: white;
+    border-radius: 10px;
+}

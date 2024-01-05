@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+footer{
+    margin-top: 20px;
+    background-color: rgb(54,101,70);
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+.links{
+    margin: 20px 0px 20px 0px;
+}
+.links>a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

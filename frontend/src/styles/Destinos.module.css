@@ -1,0 +1,52 @@
+main>h3{
+    margin-left: 20px;
+    color: rgb(54, 101, 70);
+}
+
+.intro{
+    display: grid;
+    grid-template-columns: 59% 41%;
+    margin-bottom: 40px;
+}
+.intro_novasAventuras{
+    background-color: rgb(54, 101, 70);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 5%;
+    color: white;
+}
+.intro_novasAventuras > p{
+    font-size: 20px;
+}
+.intro img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+@media(max-width: 800px){
+    main>h3{
+        display: flex;
+        justify-content: center;
+    }
+    .intro{
+        display: block;
+    }
+    .intro_novasAventuras > p{
+        font-size: 1em;
+    }
+}
