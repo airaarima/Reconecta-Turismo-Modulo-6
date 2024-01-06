@@ -33,8 +33,9 @@ public class DestinosServiceImpl implements DestinosService {
     @Override
     public Destinos updateDestino(Long id, Destinos updateDestino) {
         Destinos destinoExists=dr.findById(id).orElseThrow(() -> new DestinoNotFoundException());
+        destinoExists.setImagem(updateDestino.getImagem());
         destinoExists.setCidade(updateDestino.getCidade());
-        destinoExists.setPais(updateDestino.getPais());
+        destinoExists.setEstado(updateDestino.getEstado());
         destinoExists.setValor(updateDestino.getValor());
 
         return dr.save(destinoExists);

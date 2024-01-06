@@ -3,16 +3,23 @@
     background-color: rgb(54, 101, 70);
     box-shadow: 3px 3px 3px rgba(54, 101, 70, 0.445);
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 17px;
 }
 .card_title{
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 .card_text{
     margin:0;
+    text-align: end;
 }
 .card_body{
     background-color: rgb(54,101,70);
     color: white;
     border-radius: 10px;
+}
+
+.card_img{
+    height: 161px;
+    width: 286px;
 }

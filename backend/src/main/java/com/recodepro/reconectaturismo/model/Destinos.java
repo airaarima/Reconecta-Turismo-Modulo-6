@@ -12,10 +12,13 @@ public class Destinos {
     private Long id;
 
     @Column(nullable=false)
+    private String imagem;
+
+    @Column(nullable=false)
     private double valor;
 
     @Column(nullable=false)
-    private String pais;
+    private String estado;
 
     @Column(nullable=false)
     private String cidade;
@@ -24,10 +27,19 @@ public class Destinos {
     private Set<Passagens> passagem = new HashSet<>();
 
     public Destinos() {}
-    public Destinos(Long id, double valor, String pais, String cidade) {
-        this.id = id;
+
+    public Destinos(String imagem, double valor, String estado, String cidade) {
+        this.imagem = imagem;
         this.valor = valor;
-        this.pais = pais;
+        this.estado = estado;
+        this.cidade = cidade;
+    }
+
+    public Destinos(Long id, String imagem, double valor, String estado, String cidade) {
+        this.id = id;
+        this.imagem = imagem;
+        this.valor = valor;
+        this.estado = estado;
         this.cidade = cidade;
     }
 
@@ -38,6 +50,13 @@ public class Destinos {
         this.id = id;
     }
 
+    public String getImagem() {
+        return imagem;
+    }
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
     public double getValor() {
         return valor;
     }
@@ -45,11 +64,11 @@ public class Destinos {
         this.valor = valor;
     }
 
-    public String getPais() {
-        return pais;
+    public String getEstado() {
+        return estado;
     }
-    public void setPais(String pais) {
-        this.pais = pais;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getCidade() {

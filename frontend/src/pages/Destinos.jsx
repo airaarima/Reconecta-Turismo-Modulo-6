@@ -32,7 +32,7 @@ const Destinos = () => {
             </div>
         </section>
 
-        <h3>Destinos</h3>
+        <h3>Viagens Nacionais</h3>
         <section className={styles.cards}>
             {destinos.map(destino => (
               <CardComponent key={destino.id} data={destino}/>
