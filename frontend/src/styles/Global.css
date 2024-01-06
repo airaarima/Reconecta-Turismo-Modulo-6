@@ -9,6 +9,10 @@ html,body{
     width: 100%;
 }
 
+.navegacao{
+    color: white !important;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -16,6 +20,12 @@ body{
 
 main{
     flex: 1 0 auto;
+}
+
+.sticky{
+    position: sticky;
+    top:0;
+    z-index: 1000
 }
 
 footer{
@@ -37,5 +47,12 @@ footer{
 .App {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
+}
+
+@media(max-width: 800px){
+    .links>a{
+        font-size: 13px;
+    }
 }

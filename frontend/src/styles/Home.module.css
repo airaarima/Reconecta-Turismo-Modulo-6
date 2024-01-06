@@ -1,17 +1,16 @@
-header a{
-    color: white !important;
-}
-body{
+.transparencia{
     background-image: url("../assets/riodejaneiro1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+    width: 100vw;
+    height: 100vh;
 }
 
 .divHome{
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4));
 }
 
 main{
@@ -35,15 +34,14 @@ main{
 .consulta{
     width: 50% ;
 }
-.consulta input,button{
+.consulta > input{
     margin-bottom: 10px;
 }
-.btn{
-    background-color: rgb(54, 101, 70);
-    border: rgb(54, 101, 70);
-    color: white;
+.btnPesquisa{
+    background-color: rgb(54, 101, 70) !important;
+    border: rgb(54, 101, 70) !important;
+    color: white !important; 
 }
-
 
 @media(max-width: 768px){
     .apresentacao{

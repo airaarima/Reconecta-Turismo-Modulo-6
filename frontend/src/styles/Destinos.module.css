@@ -25,18 +25,12 @@ main>h3{
     width: 100%;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
-
-
 .cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 0px 10px 0px 10px
 }
-
 
 @media(max-width: 800px){
     main>h3{
@@ -47,6 +41,6 @@ a{
         display: block;
     }
     .intro_novasAventuras > p{
-        font-size: 1em;
+        font-size: 16px;
     }
 }

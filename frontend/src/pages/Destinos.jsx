@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/Destinos.module.css"
 import img from "../assets/maladeviagens.jpg"
 import CardComponent from "../components/CardComponent";
+import Footer from "../components/Footer";
 
 const Destinos = () => {
   const [destinos,setDestinos] = useState([]);
@@ -39,6 +40,7 @@ const Destinos = () => {
             ))}
         </section>
       </main>
+      <Footer/>
     </>
   );
 };

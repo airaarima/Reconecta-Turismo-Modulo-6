@@ -1,17 +1,24 @@
-import NavBar from './components/NavBar'
-import Destinos from './pages/Destinos';
-import Footer from './components/Footer'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/Global.css'
+import NavBar from "./components/NavBar";
+import Destinos from "./pages/Destinos";
+import Home from "./pages/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/Global.css";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className='App'>
-      <NavBar/>
-      <Destinos/>
-      <Footer/>
+    <div className="App">
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/destinos" element={<Destinos />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <Destinos/> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,17 +1,21 @@
 import React from "react";
+import logo1 from "../assets/Logo/logo.png"
 import logo2 from "../assets/Logo/logo2.png";
+import "../styles/Global.css"
 
-import { BrowserRouter, Link } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 const NavBar = () => {
+  const location = useLocation();
+  const homePage = location.pathname === "/";
+
   return (
-    <BrowserRouter>
       <header>
-        <nav className="navbar navbar-expand-lg">
+        <nav className={`navbar navbar-expand-lg ${homePage? "fixed-top":""}`}>
           <div className="container-fluid">
-            <a className="navbar-brand" href="../home/index.html">
-              <img src={logo2} alt="Logo Reconecta Turismo" />
-            </a>
+            <Link to="/" className="navbar-brand" >
+              <img src={`${homePage?logo1:logo2}`} alt="Logo Reconecta Turismo" />
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -29,41 +33,39 @@ const NavBar = () => {
             >
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a
-                    to="/home"
-                    className="nav-link active"
+                  <Link
+                    to="/"
+                    className={`nav-link active ${homePage?"navegacao":""}`}
                     aria-current="page"
-                    href="../home/index.html"
                   >
                     HOME
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="../destino/destino.html">
-                    DESTINO
-                  </a>
+                  <Link to="/destinos" className={`nav-link ${homePage?"navegacao":""}`} >
+                    DESTINOS
+                  </Link>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="../promocoes/promocoes.html">
+                {/* <li className="nav-item">
+                  <Link to="/promocoes" className="nav-link">
                     PROMOÇÕES
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="../contato/contato.html">
+                  <Link to="/contato" className="nav-link" >
                     CONTATO
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="../cadastro/cadastro.html">
+                  <Link to="/cadastro" className="nav-link" >
                     CADASTRO
-                  </a>
-                </li>
+                  </Link>
+                </li> */}
               </ul>
             </div>
           </div>
         </nav>
       </header>
-    </BrowserRouter>
   );
 };
 
