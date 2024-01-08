@@ -43,6 +43,9 @@ public class Usuarios {
     @Column(nullable=false)
     private String UF;
 
+    @Column(nullable=false)
+    private String senha;
+
     @JsonIgnore
     @OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
     private Set<Passagens> passagem = new HashSet<>();
@@ -50,7 +53,8 @@ public class Usuarios {
     public Usuarios() {
     }
 
-    public Usuarios(Long id, String nome_completo, String CPF, String RG, LocalDate data_nascimento, String email, String rua, String numero, String bairro, String cidade, String UF) {
+    public Usuarios(Long id, String nome_completo, String CPF, String RG, LocalDate data_nascimento, String email,
+                    String rua, String numero, String bairro, String cidade, String UF, String senha) {
         this.id = id;
         this.nome_completo = nome_completo;
         this.CPF = CPF;
@@ -62,6 +66,7 @@ public class Usuarios {
         this.bairro = bairro;
         this.cidade = cidade;
         this.UF = UF;
+        this.senha=senha;
     }
 
     public Long getId() {
@@ -139,6 +144,13 @@ public class Usuarios {
     }
     public void setUF(String UF) {
         this.UF = UF;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public Set<Passagens> getPassagem() {

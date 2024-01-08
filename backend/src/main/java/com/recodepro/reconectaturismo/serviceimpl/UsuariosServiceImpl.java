@@ -54,6 +54,7 @@ public class UsuariosServiceImpl implements UsuariosService {
         usuarioExists.setBairro(updateUsuario.getBairro());
         usuarioExists.setCidade(updateUsuario.getCidade());
         usuarioExists.setUF(updateUsuario.getUF());
+        usuarioExists.setSenha(updateUsuario.getSenha());
 
         return ur.save(usuarioExists);
     }
