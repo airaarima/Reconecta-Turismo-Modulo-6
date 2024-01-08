@@ -35,7 +35,7 @@ const NavBar = () => {
                 <li className="nav-item">
                   <Link
                     to="/"
-                    className={`nav-link active ${homePage?"navegacao":""}`}
+                    className={`nav-link ${homePage?"navegacao":""}`}
                     aria-current="page"
                   >
                     HOME
@@ -46,21 +46,17 @@ const NavBar = () => {
                     DESTINOS
                   </Link>
                 </li>
-                {/* <li className="nav-item">
-                  <Link to="/promocoes" className="nav-link">
-                    PROMOÇÕES
+                <li className="nav-item">
+                  <Link to="/login" className={`nav-link ${homePage?"navegacao":""}`} >
+                    LOGIN
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/contato" className="nav-link" >
+                  <Link to="/contato" className={`nav-link ${homePage?"navegacao":""}`} >
                     CONTATO
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link to="/cadastro" className="nav-link" >
-                    CADASTRO
-                  </Link>
-                </li> */}
+                
               </ul>
             </div>
           </div>

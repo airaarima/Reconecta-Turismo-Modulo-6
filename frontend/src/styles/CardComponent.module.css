@@ -12,6 +12,11 @@
 .card_text{
     margin:0;
     text-align: end;
+    font-size: 16px;
+}
+.card_text_valor{
+    margin:0;
+    text-align: end;
 }
 .card_body{
     background-color: rgb(54,101,70);

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
-import NavBar from "../components/NavBar";
 
 const Home = () => {
   return (
@@ -23,7 +22,7 @@ const Home = () => {
               />
               <div className="input-group mb-3">
                 <input type="date" className="form-control" />
-                <button
+                <button 
                   className={`btn btn-outline-secondary ${styles.btnPesquisa}`}
                   type="button"
                   id="button-addon2"
