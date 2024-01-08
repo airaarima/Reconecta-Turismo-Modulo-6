@@ -1,0 +1,76 @@
+.formCadastro{
+    color: black;
+    width: 880px;
+}
+
+.fieldsetCadastro{
+    margin-bottom: 10px;
+    background-color: rgb(54, 101, 70);
+    border-radius: 6px;
+    padding-bottom: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formCadastro label{
+    margin-right: 20px;
+}
+
+.divCadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.numeroLabel{
+    width: 90px;
+    margin: 0;
+}
+
+.UFlabel{
+    width: 90px;
+}
+
+.divInputs {
+    display: flex;
+}
+  
+.nomeLabel, .CPFlabel, .RGlabel, .ruaLabel, .emailLabel, .cidadeLabel{
+    flex-grow: 1;
+}
+@media (min-width: 768px) and (max-width: 910px){
+    .formCadastro{
+        width: 650px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 767px){
+    .divInputs label{
+        width: 100%;
+    }
+    .formCadastro{
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .divInputs{
+        flex-direction: column;
+    }
+    .divInputs label{
+        width: 100%;
+    }
+    .formCadastro{
+        width: 100%;
+    }
+    .fieldsetCadastro{
+        background-color: white;
+        color: black;
+    }
+    .fieldsetCadastro h4{
+        text-align: center;
+        background-color: rgb(54, 101, 70);;
+        color: white;
+    }
+}

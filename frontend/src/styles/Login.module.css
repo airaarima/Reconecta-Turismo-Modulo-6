@@ -1,0 +1,40 @@
+.form{
+    width: 500px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 8px 8px 18px -4px rgba(54, 101, 70, 0.603);
+    color: black;
+}
+
+h2{
+    color: rgb(54, 101, 70);
+    text-align: center;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px 0px 40px;
+}
+fieldset>input{
+    margin-bottom: 15px;
+}
+
+a{
+    color: black;
+}
+
+.senha{
+    text-align: end;
+}
+
+@media(max-width: 550px){
+    .form{
+        width: 100%;
+        box-shadow: 0px 0px 0px 0px;
+    }
+    .senha{
+        justify-content: center;
+        margin-right: 0px;
+    }
+}
